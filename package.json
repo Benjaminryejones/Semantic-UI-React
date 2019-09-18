@@ -7,11 +7,6 @@
   "module": "dist/es/index.js",
   "types": "index.d.ts",
   "unpkg": "dist/umd/semantic-ui-react.min.js",
-  "files": [
-    "src",
-    "dist",
-    "index.d.ts"
-  ],
   "sideEffects": false,
   "scripts": {
     "build": "cross-env NODE_ENV=production gulp build",
