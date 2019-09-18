@@ -161,6 +161,9 @@ export default class Dropdown extends Component {
 
     /** A selection dropdown can allow multiple selections. */
     multiple: PropTypes.bool,
+    
+    /** Multiple do not filter options in dropdown menu. */
+    multipleNoFilter: PropTypes.bool,
 
     /** Message to display when there are no results. */
     noResultsMessage: PropTypes.node,
@@ -802,7 +805,7 @@ export default class Dropdown extends Component {
     let filteredOptions = options
 
     // filter out active options
-    if (multiple) {
+    if (multiple && !multipleNoFilter) {
       filteredOptions = _.filter(filteredOptions, (opt) => !_.includes(value, opt.value))
     }
 
